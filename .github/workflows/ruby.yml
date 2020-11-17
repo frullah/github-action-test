@@ -10,8 +10,12 @@ name: Ruby
 on:
   push:
     branches: [ main ]
+    paths:
+      - Gemfile
   pull_request:
     branches: [ main ]
+    paths:
+      - Gemfile
 
 jobs:
   test:
