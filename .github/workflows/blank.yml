@@ -29,14 +29,7 @@ jobs:
       - name: Cached Dependencies
         uses: ktmud/cached-dependencies@v1
         with:
-          # Path to a JS file with cache configs
-#           caches: # optional, default is ${{ github.workspace }}/.github/workflows/caches.js
-          # Path to a Bash script with command shortcuts
-#           bashlib: # optional, default is ${{ github.workspace }}/.github/workflows/bashlib.sh
-          # Setup commands to run, can use shortcuts defined in bashlib
           run: |
             cache-restore oracle
             sudo apt install libaio-dev
             cache-save oracle
-          # Whether to run commands in parallel
-#           parallel: # optional
