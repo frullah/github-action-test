@@ -7,12 +7,12 @@ name: CI
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - Gemfile
+    paths:
+      - "!Gemfile"
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - Gemfile
+    paths:
+      - "!Gemfile"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
