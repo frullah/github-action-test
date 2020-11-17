@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - "apt-install/**"
+      - "apt-install/*"
 
 jobs:
   build:
