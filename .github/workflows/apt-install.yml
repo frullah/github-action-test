@@ -7,8 +7,6 @@ name: "APT Install"
 on:
   push:
     branches: [ main ]
-    paths:
-      - "apt-install/*"
 
 jobs:
   build:
