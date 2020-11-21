@@ -23,6 +23,8 @@ jobs:
           path: ./vendor
           key: -test- 
       
-      - run: ls ./vendor
+      - run: ls ./vendor || true
 
-      - run: echo 1 > ./vendor/text.txt
+      - run: |
+          mkdir ./vendor
+          echo 1 > ./vendor/text.txt
