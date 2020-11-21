@@ -20,7 +20,9 @@ jobs:
       - name: Test Action
         uses: actions/cache@v2.1.3
         with:
-          path: $GITHUB_WORKSPACE/vendor
+          path: ./vendor
           key: -test- 
       
-      - run: ${{ toJson(env) }}
+      - run: ls ./vendor
+
+      - run: echo 1 > ./vendor/text.txt
