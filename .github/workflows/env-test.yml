@@ -20,11 +20,14 @@ jobs:
       - name: Test Action
         uses: actions/cache@v2.1.3
         with:
-          path: ./vendor
+          path: ./vendor/bundle
           key: -test- 
       
-      - run: ls ./vendor || true
+      - run: |
+          ls ./vendor || true
+          ls ./vendor/bundle || true
 
       - run: |
-          mkdir ./vendor
+          mkdir -p ./vendor/bundle
+          echo 1 > ./vendor/bundle/text.txt
           echo 1 > ./vendor/text.txt
