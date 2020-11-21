@@ -22,3 +22,5 @@ jobs:
         with:
           path: $GITHUB_WORKSPACE/vendor
           key: -test- 
+      
+      - run: ${{ toJson(env) }}
