@@ -29,5 +29,5 @@ jobs:
 
       - run: |
           mkdir -p ./vendor/bundle
-          echo 1 > ./vendor/bundle/text.txt
-          echo 1 > ./vendor/text.txt
+          echo 1 > ./vendor/bundle/inside-vendor-bundle.txt
+          echo 1 > ./vendor/inside-vendor.txt
