@@ -20,4 +20,4 @@ jobs:
 
     steps:
       - name: asasa
-        run: echo ${github.ref == 'refs/heads/main'}
+        run: echo ${github.ref}
