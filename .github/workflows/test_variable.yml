@@ -20,4 +20,4 @@ jobs:
 
     steps:
       - name: asasa
-        run: echo ${github.ref}
+        run: echo ${{ github.ref }}
