@@ -9,9 +9,9 @@ name: Test variable
 
 on:
  push:
-  paths: [.github/workflows/test_variable.yml]
+   paths: [.github/workflows/test_variable.yml]
  pull_request:
-  paths: [.github/workflows/test_variable.yml]
+   paths: [.github/workflows/test_variable.yml]
  workflow_dispatch:
 
 jobs:
