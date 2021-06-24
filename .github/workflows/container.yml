@@ -1,0 +1,31 @@
+name: Container
+
+on:
+  push:
+    paths: [.github/workflows/container.yml]
+
+  pull_request:
+    paths: [.github/workflows/container.yml]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 3s
+          --health-retries 3
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: test
+      run: psql
